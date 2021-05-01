@@ -16,6 +16,10 @@ links.forEach(appendListItem);
 function appendListItem(label, url) {
   document.getElementById("assignmentList").innerHTML += "<li>" + label + " <a href=" + url + "></li>" + "<br>";
   };
-
+/*
+for(const [value,value] of links.entries()) {
+  document.getElementById("assignmentList").innerHTML += "<li>" + value + " <a href=" + value + "></li>" + "<br>";
+  };
+*/
   //<li>Week 1:<a href="Week 1/index.html" target="_blank">Week 1</a></li>
 //<li>Week 2:<a href="Week 2/index.html" target="_blank">Week 2 coming soon...</a></li>
