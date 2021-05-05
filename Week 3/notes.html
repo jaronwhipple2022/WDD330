@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 | Notes</title>
+</head>
+<body>
+    <h1>Week 3 Notes</h1>
+    <h2>"This" in JavaScript</h2>
+      <p>In JavaScript, keyword this behaves unlike most other programming languages. 
+          It can be used in any function, even if it’s not a method of an object.<br>
+      That way incase a variable gets changed somewhere else within the code this will still work
+      and reference the corect variable.<br>
+      The value of this is evaluated during the run-time, depending on the context.</p>
+      <p>good example...</p>
+      <p>let calculator = {<br>
+          sum() {<br>
+            return this.a + this.b;<br>
+          },<br><br>
+        
+          mul() {<br>
+            return this.a * this.b;<br>
+          },<br><br>
+        
+          read() {<br>
+            this.a = +prompt('a?', 0);<br>
+            this.b = +prompt('b?', 0);<br>
+          }<br>
+        };    </p>
+      <p>When you create a new instance of an object with the new keyword, this refers to the instance.</p>
+
+    <h2>Chapter 5: objects</h2>
+        <p>An object in JavaScript is a self-contained set of related values and functions.</p>
+        <p>easiest way to create an object literal: <br>
+          const superman = {}; <br>ways to call parts of it:<br>superman.name<br>superman['name']</p>
+        <p>check to see if an object contains a property:<br>'city' in superman;  --returns t/f<br> => hasOwnProperty()</p>
+        <p>How to look up values ex.<br>
+          for(const key in superman) {<br>
+            console.log(key + ": " + superman[key]);<br>
+        }<br>
+         "name: Superman"<br>
+         "real name: Clark Kent"<br>
+         "height: 75"<br>
+         "weight: 235"<br>
+         "hero: true"<br>
+         "villain: false"<br>
+         "allies: Batman,Supergirl,Superboy"<br>
+         "fly: function (){<br>
+            console.log(\"Up, up and away!\");<br>
+        }"</p>
+        <p>also use Object.keys() <br> this will return the objects keys:<br>
+          for(const key of Object.keys(superman)) {<br>
+            console.log(key);}</p>
+        <p>to get object values: Object.values()<br> this will return the objects values<br>
+          for(const value of Object.values(superman)) {<br>
+            console.log(value);}</p>
+        <p>to get key value pairs: Object.values() <br>
+          for(const [key,value] of Object.entries(superman)) {<br>
+            console.log(`${key}: ${value}`);}</p>
+        <p>add a new key/value superman.key = 'value';</p>
+        <p>using 'this' to create a die:<br>
+          const dice = {<br>
+            sides: 6,<br>
+            roll() {<br>
+                return Math.floor(this.sides * Math.random()) + 1; }}</p>
+        <p>The parse() method takes a string of data in JSON format and returns a JavaScript object<br>
+        the stringify() method does the opposite -- returns a JSON string.</p>
+        <p>the math() method has many...many ways to calculate</p>
+        <p>lots of information about searching for sertain words or phrases in an expression.</p>
+
+
+    <h2>Chapter 6 Document Object Model</h2>
+          <p>This chapter talks alot about selecting objects and using them within the consoe.</p>
+          <p>See chapter 6 example: (prcatice using the live console)<a href="examples/chap6.html" target="_blank">chapter6example</a>
+          <p>The document.querySelector() method allows you to use CSS notation to find thefirstelement in the document that <br>
+            matches that matches a CSS selector provided as an argument</p>
+          <p>wonderWoman.getAttribute('class') --will retrun what class an element is in.<br>
+          or you can use .className</p>
+          <p>create an element: const flash = document.createElement('li');</p>
+          <p>create a text node: const flashText = document.createTextNode('Flash');</p>
+          <p>example code used:<br>
+            const h1 = document.getElementById('title');<br>
+            const oldText = h1.firstChild;<br>
+            const newText = document.createTextNode('Justice League of America');<br>
+            h1.replaceChild(newText,oldText);</p>
+                  
+
+    <h2>Chapter 7 Events</h2>
+    <p>simple setup of an event listener:<br>
+      if (click) {<br>
+        doSomething();<br>
+        } else {<br>
+        // carry on with rest of the program}<br>
+      --adding it:  document.body.addEventListener("click", doSomething);</p>
+    <p>**The click event occurs when a user clicks with the mouse, presses the Enter key, or taps the screen</p>
+    <p>Example site for chapter 7: <a href="examples/chap7.html" target="_blank">chapter7example</a></p>
+    <p><br>*** There are lots of examples in the examples.js file***</p>
+
+
+    
+
+
+
+
+    
+</body>
+</html>

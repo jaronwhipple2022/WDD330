@@ -3,18 +3,26 @@
 const links = [
     {
       label: "Week 1",
-      url: "week1/index.html"
+      url: "Week 1/index.html"
     },
     {
       label: "Week 1",
-      url: "week1/index.html"
+      url: "Week 1/notes.html"
+    },
+    {
+      label: "Week 2",
+      url: "Week 2/notes.html"
+    },
+    {
+      label: "Week 3",
+      url: "Week 3/notes.html"
     }
   ]
 
 links.forEach(appendListItem);
 
-function appendListItem(label, url) {
-  document.getElementById("assignmentList").innerHTML += "<li>" + label + " <a href=" + url + "></li>" + "<br>";
+function appendListItem(links) {
+  document.getElementById("assignmentList").innerHTML += "<li>" + links.label + "<a href='" + links.url + "'> assignment</a></li>";
   };
 /*
 for(const [value,value] of links.entries()) {
