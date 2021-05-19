@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 | notes</title>
+</head>
+    <body>
+        <h1>Week 4 notes</h1>
+
+        <h2>Chapter 8 Forms</h2>
+            <p>How to find a specific form: <br>
+            const form = document.getElementsByTagname('form')[0];</p>
+            <p>Be careful using the reset button on forms</p>
+            <p> This is how you make a button active: <br> form.action = '/an/other.url'</p>
+            <p>Using things such as 'focus', 'blur', or 'change' will cause a user to have a different experienc <br>
+            when using the input box.</p>
+            <a href="search.html" target="_blank">Form examples</a>
+            <p>How to set a placeholder value: <br>
+                <input type='text' name='search-box' placeholder='Search Here'><br>
+            ** Look at the code **</p>
+            <p>type='password' will hash out the input value.</p>
+            <p>type='checkbox' to give a checkbox</p>
+            <p>an example of how to select values where the check box is selected: <br>
+                hero.powers = [...form.powers].filter(box => <br>
+                box.checked).map(box => box.value);</p>
+            <p>example of drop down menu:<br>
+                <label for='City'>Base of Operations:
+                    <select name='city' id='city'>
+                    <option value='' selected>Choose a City</option>
+                    <option value='Coast City'>Coast City</option>
+                    <option value='Star City'>Star City</option>
+                    </select>
+                    </label></p>
+            <p>It is also possible to directly change the value in a form using the ".value"</p>
+            <p>An error in javascript can be used to trigger a change in the css to create an obvious error.</p>
+            <p>addind disabled will cause a button to not work. Not sure when it would be needed... but its an option.</p>
+
+        <h2>Chapter 12 Object Oriented Programming</h2>
+            <p>" style of programming that involves separating the code into objects that have properties and methods."</p>
+            <p>same example of creating a die, but this time with a constructor:<br>
+                const Dice = function(sides=6){<br>
+                    this.sides = sides;<br>
+                    this.roll = function() {<br>
+                    return Math.floor(this.sides * Math.random() + 1)}}
+                    new instance of that function: <br>
+                    const redDice = new Dice(); <br>
+                    Dice { sides: 6, roll: [Function] }</p>
+            <p>constructors dont need parenthesis.</p>
+            <p>JS has a decent amount of built in constructor functions that are accessible.</p>
+            <p>** class declarations are very similar to what I have already learned ** </p>
+            <p>A Static method is called by the class directly rather than by instances of the class.</p>
+            <p>All classes and constructor functions have a prototype property that returns an object</p>
+            <p>Another way is to use the Object.getPrototypeOf() method, which takes the object as a parameter</p>
+            <p>Prototype properties are shared by every instance of the class.</p>
+            <p>The prototype object is live, so if a new property or method is added to the<br>
+                prototype, any instances of its class will inherit the new properties and methods<br>
+                automatically, even if that instance has already been created.</p>
+            <p>By default, an object’s methods are public in JavaScript.</p>
+            <p>** A lot of similar concepts to what I have learned in Python and other languages... just a different syntax **</p>
+            <p>Properties of objects in JavaScript are said to be enumerable or non-enumerable.<br>
+                If they aren’t enumerable, this means they will not show up when a for-in loop<br>
+                is used to loop through an object’s properties and methods.</p>
+            <p>the value of this loses its scope, and points to the global object inside a nested function. <br>
+            ** A common solution is to set the variable that to equal this before the nested <br>
+            function, and refer to that in the nested function instead of this. </p>
+            <p>Arrow functions are also more friendly to use because they bind the origional scope.</p>
+            <p>A mixin method can be used to add properties and methods from other objects without creating an inheritance chain</p>
+
+        <h2>Chapter 15 Modern JavaScript Developement</h2>
+                <p>A JavaScript library is a piece of code that provides several methods that make it <br>
+                    easier to achieve common tasks.</p>
+                <p>jQueury is used to reduce lines of code by setting vriables and inserting them into the same file.</p>
+                <p>the $ symbol as a convenient alias for the the global<br>
+                    jQuery object that contains all of jQuery’s methods.<br>
+                    apparently many options are vailable to finding how to use jQuery. Widely used so it must be convenient.</p>
+                <p>Underscore and Lodash are also very popular, have many util functions...<br>
+                (They get their name from using the "_" so much...</p>
+                <p>You need to include the code for the library as well as your own code. This increases the amount of<br>
+                    574 JavaScript: Novice to Ninja, 2nd Editioncode that needs to be downloaded by a website, which in <br>
+                    some cases can cause performance issues.</p>
+                <p>There are lots of different opinions on using a library and it basically breaks down to deciding wether or <br>
+                not it is worth the extra work.</p>
+                <p>A module is a self-contained piece of code that provides functions and  <br>
+                    that can then be used in other files and by other modules.</p>
+                <p>ES6 is a blessing.  easiest one to use yet... which should be expected.</p>
+                <p>You can only use one default export at a time, otherwise an error will occurr.</p>
+                <p> *Model-View-Controller (MVC)  Just as learned before.</p>
+                <P>Templates sound interesting, but not csure when I will be using them?<br>
+                    Templating languages allow HTML to be separated from the JavaScript program,<br>
+                    making maintenance easier because they’re no longer tightly coupled.</P>
+                <p>Node and Node Package Manager can both be used as well.. They are widely used it sounds like >>> <br>
+                For example on how to implement look it up - just theoretical and explanations here.</p>
+        
+    </body>
+</html>
