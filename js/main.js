@@ -2,32 +2,36 @@
 // Array of links that will be updated as new assignments are completed.
 const links = [
     {
-      label: "Week 1",
+      label: "Week 1 Index",
       url: "Week 1/index.html"
     },
     {
-      label: "Week 1",
+      label: "Week 1 Notes",
       url: "Week 1/notes.html"
     },
     {
-      label: "Week 2",
+      label: "Week 2 Notes",
       url: "Week 2/notes.html"
     },
     {
-      label: "Week 3",
+      label: "Week 3 Notes",
       url: "Week 3/notes.html"
     },
     {
-      label: "Week 4",
+      label: "Week 4 Notes",
       url: "Week 4/notes.html"
     },
     {
-      label: "Week 4",
+      label: "Week 4 TicTacToe",
       url: "Week 4/tic-tac-toe.html"
     },
     {
-      label: "Week 5",
+      label: "Week 5 Notes",
       url: "Week 5/notes.html"
+    },
+    {
+      label: "Week 6 ToDo",
+      url: "Week 6/ToDo/ToDo.html"
     }
   ]
 
