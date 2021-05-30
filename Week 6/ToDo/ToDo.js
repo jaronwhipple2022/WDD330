@@ -36,7 +36,7 @@ function checkBox() {
 
 }
 
-function getChecks(name) {
+function getChecks(checked) {
     const checkboxes = document.querySelectorAll(`input[name="${checked}"]:checked`);
     let values = [];
     checkboxes.forEach((checkbox) => {
@@ -47,5 +47,5 @@ function getChecks(name) {
 
 const btn = document.querySelector('#btn');
 btn.addEventListener('click', (event) => {
-    alert(getChecks('color'));
+    alert(getChecks('checked'));
 });
