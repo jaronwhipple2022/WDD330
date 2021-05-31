@@ -13,7 +13,7 @@
 
     <table>
                <tr>
-                   <th>Complete</th>
+                   <th>Select</th>
                    <th>Task #</th>
                    <th>Task Description</th>
                </tr>
@@ -32,9 +32,19 @@
     
     
         <button id="btn">Get checked tasks</button>
-        <button id="checked" onclick="viewChecked()">log</button>
-        
+        <button id="checkBTN" onclick="viewChecked()">Move To Complete</button>
     </section>
+
+    <table>
+        <tr>
+            <th>Completed Tasks:</th>
+            <th></th>
+        </tr>
+        <tbody id="complete">
+
+        </tbody>
+    </table>
+
     </main>
 
     <script src="ToDo.js"></script>

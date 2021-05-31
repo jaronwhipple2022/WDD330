@@ -46,13 +46,28 @@ btn.addEventListener('click', (event) => {
     alert("these tasks are checked:" + getChecks('checked'));
 });
 
+
+
 checkedTasks = []
-function viewChecked() {
-    for (i = 0; i < tasks.length + 1; i++) {
-        if (i in getChecks('checked')) {
-            checkedTasks.push(tasks[i])
-            console.log(checkedTasks)
+document.getElementById('checkBTN').onclick = function() {
+    var checkboxes = document.getElementsByName('checked');
+    for (var checkbox of checkboxes)
+    {
+        if (checkbox.checked) {
+            checkedTasks.push(checkbox.value);
+            tasks.pop(i)
+        }
     }
+    console.log(checkedTasks)
+
+    var complete = "";
+    for (i = 0; i < checkedTasks.length; i++) {
+        complete += "<tr><td>" +
+        "</td><td>" + [i + 1] +
+        "</td><td>" + checkedTasks[i]['value'] + "</td></tr>"
+    };
+    document.getElementById("complete").innerHTML = complete;
+    updateTasks()
+    //console.log("these" + tasks)
 }
-console.log(checkedTasks)
-}
+

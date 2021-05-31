@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-    margin-left: 20%;
+    margin-left: 10%;
 }
 main {
     max-width: 60%;
@@ -31,5 +31,9 @@ table {
 
 input, button{
     color: darkorchid;
+    font-size: large;
+}
+
+tbody {
     font-size: large;
 }
