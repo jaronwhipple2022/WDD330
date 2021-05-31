@@ -8,6 +8,7 @@
     <title>ToDo Checklist</title>
 </head>
 <body>
+    <main>
     <h1>Todo's:</h1>
 
     <table>
@@ -22,16 +23,19 @@
 
     </table>
 
-    <div class="controls">
+    <section class="controls">
         <input id="itemName" type="text" placeholder="new task">
         <input id="addItem" type="button" value="Add to list" onclick="addItem()">
 
         <input id="itemNum" type="number" placeholder="task #">
         <input id="deleteItem" type="button" value="Remove from list" onclick="deleteItem()">
-    </div>
     
-    <button id="btn">Get checked tasks</button>
     
+        <button id="btn">Get checked tasks</button>
+        <button id="checked" onclick="viewChecked()">log</button>
+        
+    </section>
+    </main>
 
     <script src="ToDo.js"></script>
 </body>

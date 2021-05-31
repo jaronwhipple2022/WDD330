@@ -8,7 +8,7 @@ function updateTasks(){
     check.setAttribute('type', 'checkbox');
 
     for (i = 0; i < tasks.length; i++) {
-        taskList += "<tr><td>" + "<input type='checkbox' name='checked' value='" + i + "'></input>" +
+        taskList += "<tr><td>" + "<input type='checkbox' name='checked' value='" + (i + 1) + "'></input>" +
         "</td><td>" + [i + 1] +
         "</td><td>" + tasks[i] + "</td></tr>"
     };
@@ -32,10 +32,6 @@ function deleteItem() {
     updateTasks()
 }
 
-function checkBox() {
-
-}
-
 function getChecks(checked) {
     const checkboxes = document.querySelectorAll(`input[name="${checked}"]:checked`);
     let values = [];
@@ -47,5 +43,16 @@ function getChecks(checked) {
 
 const btn = document.querySelector('#btn');
 btn.addEventListener('click', (event) => {
-    alert(getChecks('checked'));
+    alert("these tasks are checked:" + getChecks('checked'));
 });
+
+checkedTasks = []
+function viewChecked() {
+    for (i = 0; i < tasks.length + 1; i++) {
+        if (i in getChecks('checked')) {
+            checkedTasks.push(tasks[i])
+            console.log(checkedTasks)
+    }
+}
+console.log(checkedTasks)
+}
