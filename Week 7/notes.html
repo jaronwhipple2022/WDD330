@@ -9,7 +9,107 @@
 <body>
     <h1>Week 7 Notes</h1>
 
-    <p></p>
+    <h2>Chapter 11: Further Functions</h2>
+
+    <p>you can also use the call() method to invoke a function.<br>
+        sayHello.call(clark);<br>
+         'Hello, my name is Clarke'</p>
+    <p>Another example of using 'this':<br>
+        function sayHello(greeting='Hello'){<br>
+            return `${ greeting }, my name is ${ this.name }`;<br>
+        }<br>
+        sayHello.call(clark, 'How do you do');<br>
+        'How do you do, my name is Clark'</p>
+        <p>"The apply() method works in the same way, except the arguments of the function are provided as an array, even if there is only one argument"</p>
+        <p>You can also write function that cache, or store data. <br>
+            function square(x){ <br>
+                square.cache = square.cache || {};<br>
+                if (!square.cache[x]) {<br>
+                    square.cache[x] = x*x;<br>
+                }<br>
+                return square.cache[x]
+            }</p>
+    <p>To call the cahce simple say: "function".cache;</p>
+    <p>YOu can create temporary c=variables within functions by setting them equal to temp.</p>
+    <p>Its a good idea to use strict mode within a Immediately Invoked Function Expression aka an IIFE.</p>
+    <p>Careful using self defining functions because they can lose properties later on.</p>
+    <p>A recursive function is almost like a loop: <br>
+        function factorial(n) {<br>
+            if (n === 0) {<br>
+                return 1;<br>
+            } else {v
+                return n * factorial(n - 1);<br>
+            }<br>
+        }</p>
+    <p>"we can use the setTimeout() function to call the callback after a given number of seconds"</p>
+    <p>callback hell.. for a reason... -> callbackhell.com</p>
+    <p>A promise using the dice function and timeout:<br>
+            const promise = new Promise( (resolve,reject) => {<br>
+                const n = dice.roll();<br>
+                setTimeout(() => {<br>
+                    (n > 1) ? resolve(n) : reject(n);<br>
+                }, n*1000);<br>
+            });</p>
+    <p>Adding a callback helps create more generic function. *</p>
+    <p>CLosures.... kinda confusing.<br>
+        best summary: "A closure is a reference to a variable that was created inside the scope of another function, 
+        but is then kept alive and used in another part of the program."</p>
+    <p>Use yield with generators to store the current value for future use.</p>
+    <p>Rules of a pure function: <br>
+            1) The return value of a pure function should only depend on the values provided as arguments. It doesn't
+             rely on values from somewhere else in the program.<br>
+
+            2) There are no side-effects. A pure function doesn't change any values or data elsewhere in the program. 
+            It only makes non-destructive data transformations and returns new values, rather than altering any of the 
+            underlying data.<br>
+            
+            3) Referential transparency. Given the same arguments, a pure function will always return the same result.</p>
+    <p>Simple example:<br>
+            const message = 'Hello JavaScript';<br>
+            reverse(message);<br>
+             'tpircSavaJ olleH'<br>
+            message // hasn't changed<br>
+            'Hello JavaScript'   <br></p>
+    <p>"Higher-order functions are functions that accept another function as an argument, or return another function
+             as a result, or both."</p>
+    <p>Curry functions use parts of other functions to complete a task.</p>
+
+    <h2>Chapter 13: AJAX</h2>
+
+    <p>"Ajax allows JavaScript to request resources from a server on behalf of the client."</p>
+    <p>basic setup to retrieve data...<br>
+        fetch('https://example.com/data')<br>
+        .then( // code that handles the response )<br>
+        .catch( // code that runs if the server returns an error )</p>
+    <p>This is an example if block to retrieve the request result: <br>
+        const url = 'https:example.com/data';<br>
+        fetch(url)<br>
+        .then((response) => {<br>
+            if(response.ok) {<br>
+                return response;<br>
+            }<br>
+            throw Error(response.statusText);<br>
+        })<br>
+        .then( response => // do something with response )<br>
+        .catch( error => console.log('There was an error!') )</p>
+    <p>Many different methods exist to handle responses:<br>
+        text() redirect() blob() json() etc.</p>
+    <p>Request objects are created using the Request() constructor, and include many different properties.<br>
+    example:<br>const request = new Request('https://example.com/data', {<br>
+        method: 'GET',<br>
+        mode: 'cors',<br>
+        redirect: 'follow',<br>
+        cache: 'no-cache'<br>
+    });</p>
+    <p>headers are used to pass any additional information about a request:<br>
+        headers.get('Content-Type');<br>
+         'text/plain'</p>
+    <p>see example page: <a href="ajax_example.html" target="_blank">ajax example</a></p>
+    <br>
+    <p>   ***  Also another example of a ToDo list is in thin chapter  ***</p>
     
+
+
+
 </body>
 </html>
