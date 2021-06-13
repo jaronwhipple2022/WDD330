@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes | Week 8</title>
+</head>
+<body>
+    <h1>Week 8 reading notes</h1>
+    <h2>Chapter 8: Transforms and Transitions</h2>
+        <p>"The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page."</p>
+        <p>The translate(x,y) function moves an element x from the left, and y from the top:<br>
+        ex: transform: translate(45px, -45px);</p>
+        <p>Can also use translateX or translateY</p>
+        <p>The scale(x,y) function scales an element by the defined factors horizontally then vertically.<br>
+        ex: transform: scale(1.5, 0.25);</p>
+        <p>The rotate() function rotates an element around the point of origin by a specified angle value.</p>
+        <p>The skew(x,y) function specifies a skew along the x and y axes.<br>
+        ex: transform: skew(15deg, 4deg);</p>
+        <p>Transform origin determines from what point the object rotates. <br>
+        ex: transform-origin: 0 0;</p>
+        <p><br>"CSS transitions generally require less client-side processing, so they’ll usually appear smoother."</p>
+        <p>transition properties, include: transition-property , transition-duration , transition-timing-function , and transition-delay</p>
+        <p>ex: .ad-ad2 h1 span {<br>
+            transition-property: transform;<br>
+        }</p>
+        <p>timing properties are available to control how fast or how long the transition occurs</p>
+        <p>long declaration:<br>.ad-ad2 h1 span {<br>
+            transition-property: transform; <br>
+            transition-duration: 0.2s;  <br>
+            transition-timing-function: ease-out;<br>
+            transition-delay: 50ms;<br>
+        }</p>
+        <p>short declaration: <br> .ad-ad2 h1 span { <br>
+            transition: transform 0.2s ease-out 50ms;<br>
+        }</p>
+        <p>can do multiple at a time: transition: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;</p>
+        <p>Animations are also possible.  Almost like a combination of transforms and transitions.</p>
+        <p>animation example: <br> .verbose {<br>
+            animation-name: appearDisappear; <br>
+            animation-duration: 300ms; <br>
+            animation-timing-function: ease-in;<br>
+            animation-iteration-count: 1;<br>
+            animation-direction: alternate;<br>
+            animation-delay: 5s;<br>
+            animation-fill-mode: backwards;<br>
+            animation-play-state: running;<br>
+        }<br>
+        /* shorthand */<br>
+        .concise {<br>
+            animation: 300ms ease-in alternate 5s backwards appearDisappear;<br>
+        }</p>
+
+
+    <h2>Chapter 12: Canvas, SVG, and Grag and Drop</h2>
+        <p>"With HTML5’s Canvas API, we can draw anything we can imagine"</p>
+        <p>The text in between the canvas tags will only be shown if the canvas element is not supported by the visitor’s browser.</p>
+        <p>see example page: <a href="canvas_example.html" target="_blank">Canvas example</a></p>
+    
+</body>
+</html>
