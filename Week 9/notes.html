@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 | Notes</title>
+</head>
+<body>
+    <h1>Week 9 Notes</h1>
+
+    <h2>Chapter 9: The Indow Object</h2>
+
+        <p>The BOM... not the Book of Mormon, The Browser Object Model.</p>
+        <p>The BOM is a collection of properties and methods that contain information about the <br>
+            browser and computer screen</p>
+        <p>If you dont know the global name you can use this:<br>
+            from within the global scope<br>
+            const global = this;</p>
+        <p>Otherwise you can use 'window.' like window.x</p>
+        <p>The window.alert() method will pause the execution of the program and display a message <br>
+        in a dialog box. The message is provided as an argument to the method, and undefined is always returned</p>
+        <p>window.confirm('Do you wish to continue?');<br>
+             undefined</p>
+        <p>remember " these methods will stop the execution of a program in its tracks."</p>
+        <p>This will return what type of browser is being used: window.navigator.userAgent</p>
+        <p>The href property returns the full URL as a string: window.location.href </p>
+        <p>Other info you can call is: host, protocol, hostname, port, path, pathname, search, hash, location</p>
+        <p>The reload() method can be used to force a reload of the current page. If it’s given a parameter of true, <br>
+            it will force the browser to reload the page from the server, instead of using a cached page.</p>
+        <p>The assign() method can be used to load another resource from a URL provided as a parameter</p>
+        <p>The window.history property can be used to access information about any previously visited pages <br>
+            in the current browser session</p>
+        <p>The window.history.length property shows how many pages have been visited before arriving at the current page.</p>
+        <p>opening a new window ex. <br>
+            const popup = window.open('https://sitepoint.com',' <br>
+            SitePoint','width=400,height=400,resizable=yes');</p>
+        <p>This is how JavaScript gets a bad name, for being annoying with popups.</p>
+        <p>These tell you info about the screen: window.screen.height, window.screen.width</p>
+        <p>The write() method simply writes a string of text to the page. If a page has already loaded, it will completely replace the current document</p>
+        <p>To create a cookie, you assign it to JavaScript’s “cookie jar”, using the document.cookie property</p>
+        <p>To see the current contents of the cookie jar, simply enter document.cookie</p>
+        <p>Setting an expiry date on a cookie:<br>
+            const expiryDate = new Date(); <br>
+            const tomorrow = expiryDate.getTime() + 1000 * 60 * 60 * 24;<br>
+            expiryDate.setTime(tomorrow);<br>
+            document.cookie = `name=Batman; expires=${ expiryDate.toUTCString()}`;</p>
+        <p>Adding the string ; secure to the end of a cookie will ensure it’s only transmitted over a secure HTTPS network</p>
+        <p>To remove a cookie, you need to set it to expire at a time in the past:</p>
+        <p>Animation can be used in JS but it is reccomended to use CSS in some situations.</p>
+
+
+    <h2>Chapter 14: HTML5 APIs</h2>
+
+        <p>The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser.</p>
+        <p>Requirements:<br>Start with data- <br>
+        Contain only lowercase letters, numbers, hyphens, dots, colons or underscores.<br>
+        Include an optional string value.</p>
+        <p>Each element has a dataset property that can be used to access any data- attributes it contains. </p>
+        <p>You could later call this same piece of information.</p>
+        <p>"If a browser supports the Web Storage API, the window object will have a property called localStorage , which is a native<br>
+             object with a number of properties and methods used to store data. The information is saved in the form of <br>
+             key-value pairs, and the values can only be strings. There is also a sessionStorage object that works in the<br>
+              same way, although the data is only saved for the current session."</p>
+        <p>Here is a basic example of storing information. To save a value locally, use: localStorage.setItem('name', 'Walter White');</p>
+        <p>To reopen the previous example, use: localStorage.getItem('name'); </p>
+        <p>"Rather than using the getItem() and setItem() methods, assignment can be used instead. In the next example, we<br>
+             simply reference localStorage.name as if it was a variable to change its value:<br>
+            localStorage.name = 'Heisenberg'; <br>
+            console.log(localStorage.name);</p>
+        <p>You can later remove elements bu using: localStorage.removeItem('name');</p>
+        <p>localStorage.clear(); *This will completely clear the local storage.</p>
+        <p>Create a json string and then read it:<br>
+            localStorage.setItem('superman', JSON.stringify(hero);
+            This will save the hero object as a JSON string using the string 'superman' as the key. To retrieve the superhero as<br>
+             a JavaScript object:<br>
+            superman = JSON.parse(localStorage.getItem('superman'));</p>
+        <p>simple statement: "The Web Storage API provides a useful way of storing various types of information on a user’s computer without the restriction of cookies."</p>
+        <p>The Geolocation API is used to obtain the geographical position of the device.</p>
+        <p>This can be used with an additional function to find device location:<br>
+            navigator.geolocation.getCurrentPosition(youAreHere);</p>
+        <p>Combined with this: <br>
+            function youAreHere(position) {<br>
+                console.log(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`);<br> 
+            }</p>
+        <p>The position object has several other properties that can be used to find out information about the <br>
+            location and movement of the device, including: heading, timestamp, speed, altitude</p>
+        <p>This will keep a device location updated: const id = navigator.geolocation.watchPosition(youAreHere);</p>
+        <p>Web workers allow processes to be run in the background, adding support for concurrency in JavaScript</p>
+        <p>To get started, use the Worker() constructor function to create a new worker:<br>
+         const worker = new Worker('task.js');</p>
+        <p>once done it can be ended with terminate()</p>
+        <p>"The Notification API allows you to show messages using the system's notifications"</p>
+        <p>ex: if(window.Notification) {<br>
+            Notification.requestPermission();
+        }</p>
+
+</body>
+    
+</body>
+</html>
