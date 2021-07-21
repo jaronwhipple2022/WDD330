@@ -51,7 +51,7 @@ const links = [
     },
     {
       label: "Final Project (Please see github repository)",
-      url: "Final_Project/ammo.html"
+      url: "Final_Project/main.html"
     }
   ]
 
