@@ -1,0 +1,44 @@
+
+body {
+    background-color: #242F40;
+    margin: auto;
+    text-align: center;
+    color: #E5E5E5;
+}
+
+button#search {
+    background-color: #28282B;
+    border: 2px solid #E5E5E5;
+    color: #E5E5E5;
+    padding: 28px 120px;
+    border-radius: 4px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    margin: .5em;
+}
+
+div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #E5E5E5;
+    background-color: #AC3931;
+    max-width: 75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: .5em;
+}
+
+h1 {
+    background-color: #91171f;
+    max-width: 100%;
+}

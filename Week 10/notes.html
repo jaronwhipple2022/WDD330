@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Notes</title>
+</head>
+<body>
+    <h1>Week 10 notes</h1>
+
+    <h2>MDN: Validating Forms</h2>
+        <p>Client side validation is the pre check the web browser does before submitting the form data.</p>
+        <p>Client side is nly the PRECHECK. server side validation must be in place as well.</p>
+        <p>"Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation."</p>
+        <p>Key words in html include: required, min, max, pattern, minlength, manxlength</p>
+        <p>Errors returned include: badInput, patternMismatch, rangeOverflow or rangeUnderflow, stepMismatch, tooLong or tooShort, typeMismatch, valueMissing, or a customError.</p>
+        <p>see examples: <br><a href="example/ex.html">Example 1</a> <br> <a href="example/ex2.html">Example 2</a></p>
+        <br>
+        <p>Using JavaScript examples: <br><a href="example/ex3.html">Example 1</a> <br> <a href="example/ex4.html">Example 2</a>
+            <br> <a href="example/ex5.html">Example 3</a></p>
+
+
+    <h2>MDN: Using Fetch</h2>
+        <p>Intro: <br>"The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline,<br>
+             such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch<br>
+             resources asynchronously across the network."</p>
+        <p>basic fetch example:<br>fetch('http://example.com/movies.json')<br>
+            .then(response => response.json())<br>
+            .then(data => console.log(data));</p>
+        <p>Lots of heavy examples... see json examples from book. <br><a href="example/fetch.js">Example</a></p>
+
+    
+</body>
+</html>
