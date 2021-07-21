@@ -48,6 +48,10 @@ const links = [
     {
       label: "Week 10 notes",
       url: "Week 10/notes.html"
+    },
+    {
+      label: "Final Project (Please see github repository)",
+      url: "Final_Project/ammo.html"
     }
   ]
 
